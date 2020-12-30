@@ -44,7 +44,7 @@ function requestProperty(address account, bytes32 jobId, string calldata propert
 ### Example
 
 ```Solidity
-ICrystalOracle(<oracle address>).requestProperty(0xeB31973E0FeBF3e3D7058234a5eBbAe1aB4B8c23, 0x9de7cf0db82943a1b2a4a9385483b20700000000000000000000000000000000, "atm")
+ICrystalOracle(<oracle address>).requestProperty(0xeB31973E0FeBF3e3D7058234a5eBbAe1aB4B8c23, 0xaff4a98545c948e18547dd80d4e413eb00000000000000000000000000000000, "atm")
 ```
 
 # Check if address is risky in context of specific property
