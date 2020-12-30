@@ -1,3 +1,11 @@
+# About
+
+In 2020, the amount of stolen cryptocurrencies is less than in 2019, but nevertheless, the number of hacks has only increased. The DeFi boom attracted the attention of many hackers and bad actors as money continued to flood into the market.
+
+At the moment, there are no oracles on the market that would allow determining whether an address is involved in any kind of fraud (For example hacks, scams, etc). This allows criminals to use DeFi platforms to exchange illegally obtained cryptocurrencies. For example, Kucoin hackers used Uniswap to exchange stolen coins: https://blog.chainalysis.com/reports/kucoin-hack-2020-defi-uniswap. 
+
+Hacken using Crystal data created oracle that allows protecting crypto platforms from “malicious” crypto deposits. Platforms and users will be able to check whether it is safe to accept a transaction from a particular address because cryptocurrencies can be blocked when they are further deposited on any centralized exchange.
+
 # Properties
 
 Pass one of the properties below to Crystal Oracle and check if address is risky for this criteria
