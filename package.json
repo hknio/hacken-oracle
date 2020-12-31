@@ -1,0 +1,76 @@
+{
+  "name": "crystal-oracle",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run compile && npx hardhat typechain",
+    "clean": "npx hardhat clean",
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "coverage": "npm run build && npx hardhat coverage --temp artifacts --network coverage",
+    "rebuild": "npm run clean && npm run build && npm run test",
+    "lint": "eslint ./ --fix",
+    "lint-quick": "pretty-quick --staged --pattern \"**/*.*(ts|tsx)\"",
+    "deploy": "npm run rebuild && npx hardhat run scripts/deploy.ts"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-quick",
+      "pre-push": "npm run lint"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pragma-Technologies/crystal-oracle"
+  },
+  "author": "hvrlk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Pragma-Technologies/crystal-oracle/issues"
+  },
+  "homepage": "https://github.com/Pragma-Technologies/crystal-oracle#readme",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.0",
+    "@nomiclabs/hardhat-etherscan": "^2.0.0",
+    "@nomiclabs/hardhat-waffle": "^2.0.0",
+    "@openzeppelin/contracts": "^3.2.0",
+    "@openzeppelin/upgrades": "^2.8.0",
+    "@typechain/ethers-v4": "^1.0.0",
+    "@typechain/ethers-v5": "^4.0.0",
+    "@typechain/truffle-v4": "^2.0.2",
+    "@typechain/truffle-v5": "^2.0.2",
+    "@typechain/web3-v1": "^1.0.0",
+    "@types/chai": "^4.2.14",
+    "@types/mocha": "^8.0.3",
+    "@types/node": "^14.14.5",
+    "@typescript-eslint/eslint-plugin": "^3.1.0",
+    "@typescript-eslint/parser": "^3.1.0",
+    "chai": "^4.2.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.13.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.20.0",
+    "ethereum-waffle": "^3.1.2",
+    "ethers": "^5.0.19",
+    "hardhat": "^2.0.2",
+    "hardhat-deploy": "^0.7.0-beta.23",
+    "hardhat-deploy-ethers": "^0.3.0-beta.5",
+    "hardhat-typechain": "^0.3.3",
+    "husky": "^4.3.0",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+    "solc": "^0.7.4",
+    "solidity-coverage": "^0.7.11",
+    "ts-generator": "^0.1.1",
+    "ts-morph": "^8.1.2",
+    "ts-node": "^9.0.0",
+    "typechain": "^3.0.0",
+    "typescript": "^4.0.5",
+    "yesno": "^0.3.1"
+  },
+  "dependencies": {
+    "@chainlink/contracts": "0.0.11"
+  }
+}
